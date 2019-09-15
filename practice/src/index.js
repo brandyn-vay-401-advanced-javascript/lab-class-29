@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import content from './content.json';
-import Page from './components/page.js';
+import Page from './components/page/page.js';
 
 
 const App = (props) => {
