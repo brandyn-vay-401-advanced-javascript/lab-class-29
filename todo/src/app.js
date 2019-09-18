@@ -21,7 +21,7 @@ class App extends React.Component {
 
   deleteIt = idx => {
     this.state.items.splice(idx,1)
-    this.setState({ items: this.state.items})
+    this.setState({ items:   this.state.items})
   };
 
   render() {

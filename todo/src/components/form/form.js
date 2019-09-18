@@ -5,18 +5,21 @@ class Form extends React.Component {
     super(props);
     this.state = {
       current: "",
-      items: this.props.items
+      items: this.props.items,
+      name: "",
+      difficulty: 1-5,
+      dueDate: this.props.dueDate
     };
   }
-  handler = event => {
-    event.preventDefault();
+  handler = e => {
+    e.preventDefault();
     this.props.action(this.state.current);
     this.setState({ current: "" });
-    event.target.reset();
+    e.target.reset();
   };
 
-  capture = event => {
-    let current = event.target.value;
+  capture = e => {
+    let current = e.target.value;
     this.setState({ current });
   };
 
