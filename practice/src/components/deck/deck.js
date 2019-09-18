@@ -2,7 +2,7 @@ import React from "react";
 import {When} from '../if/if.js';
 
 const Deck = props => {
-  const deck = props.content || {};
+  const deck = props.deck || {};
   return (
     <section className="deck">
       <When condition={deck.title}>
