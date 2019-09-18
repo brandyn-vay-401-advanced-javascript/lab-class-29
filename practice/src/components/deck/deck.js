@@ -1,11 +1,13 @@
 import React from "react";
+import {When} from '../if/if.js';
 
 const Deck = props => {
+  const deck = props.content || {};
   return (
     <section className="deck">
-      <header>
-        <h2>{props.deckContent.title}</h2>
-      </header>
+      <When condition={deck.title}>
+        <header><h2>{deck.title}</h2></header>
+      </When>
       {props.children}
     </section>
   );

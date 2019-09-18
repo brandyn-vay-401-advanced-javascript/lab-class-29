@@ -11,7 +11,11 @@
 * [front-end](http://xyz.com) (when applicable)
 
 ### Modules
-#### `modulename.js`
+#### `form.js`
+#### `header.js`
+#### `list.js`
+#### `app.js`
+
 ##### Exported Values and Methods
 
 ### Setup
@@ -21,10 +25,7 @@
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+  * will stand up the server on localhost
   
 #### Tests
 * How do you run tests?
