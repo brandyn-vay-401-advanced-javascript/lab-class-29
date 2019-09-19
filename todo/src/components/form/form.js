@@ -1,35 +1,18 @@
 import React from "react";
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: "",
-      items: this.props.items,
-      name: "",
-      difficulty: 1-5,
-      dueDate: this.props.dueDate
-    };
-  }
-  handler = e => {
-    e.preventDefault();
-    this.props.action(this.state.current);
-    this.setState({ current: "" });
-    e.target.reset();
-  };
+import styles from "./form.scss";
 
-  capture = e => {
-    let current = e.target.value;
-    this.setState({ current });
-  };
-
-  render() {
-    return (
-      <form onSubmit={this.handler}>
-        <input onChange={this.capture} /> Add New Item
-      </form>
-    );
-  }
-}
-
+const Form = props => {
+  return (
+    <div className={styles.form}>
+      <div>
+        <header>
+          <span className="title">{props.title}</span>
+          <button onClick={props.close}>X</button>
+        </header>
+        <div>{props.children}</div>
+      </div>
+    </div>
+  );
+};
 export default Form;
